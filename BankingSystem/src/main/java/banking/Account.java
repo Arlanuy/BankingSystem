@@ -21,7 +21,7 @@ public abstract class Account {
 		this.accountHolder = accountHolder;
 		this.accountNumber = accountNumber;
 		this.pin = pin;
-		this.startingDeposit = startingDeposit;
+		this.balance = startingDeposit;
 	}
 
 	public int getPin() {
