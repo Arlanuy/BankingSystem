@@ -9,7 +9,7 @@ import java.util.Random;
  */
 public class Bank implements BankInterface {
 	private LinkedHashMap<Long, Account> accounts;
-
+	private Long bank_index = 0;
 	public Bank() {
 		// complete the function
 		accounts = new LinkedHashMap<>();
@@ -25,16 +25,18 @@ public class Bank implements BankInterface {
 
 	public Long openCommercialAccount(Company company, int pin, double startingDeposit) {
 		// complete the function
-				Random rd = new Random();
-				Long accountNumber = rd.nextLong();
+				//Random rd = new Random();
+				Long accountNumber = this.bank_index;
+				this.bank_index += 1;
 				this.accounts.put(accountNumber, new CommercialAccount(company, accountNumber, pin, startingDeposit));
         return accountNumber;
 	}
 
 	public Long openConsumerAccount(Person person, int pin, double startingDeposit) {
 		// complete the function
-        Random rd = new Random();
-				Long accountNumber = rd.nextLong();
+        //Random rd = new Random();
+				Long accountNumber = this.bank_index;
+				this.bank_index += 1;
 				this.accounts.put(accountNumber, new ConsumerAccount(person, accountNumber, pin, startingDeposit));
         return accountNumber;
 	}
