@@ -64,7 +64,7 @@ public class Bank implements BankInterface {
 	public boolean debit(Long accountNumber, double amount) {
 		// complete the function
 				Account acc = this.accounts.get(accountNumber);
-				boolean is_debited = acc.debit(amout);
+				boolean is_debited = acc.debit(amount);
         return is_debited;
 	}
 }
