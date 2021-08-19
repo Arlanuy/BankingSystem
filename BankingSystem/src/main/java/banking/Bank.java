@@ -9,7 +9,7 @@ import java.util.Random;
  */
 public class Bank implements BankInterface {
 	private LinkedHashMap<Long, Account> accounts;
-	private Long bank_index = 0;
+	private long bank_index = 0;
 	public Bank() {
 		// complete the function
 		accounts = new LinkedHashMap<>();
