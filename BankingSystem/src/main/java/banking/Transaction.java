@@ -25,28 +25,24 @@ public class Transaction implements TransactionInterface{
 		// complete the function
 		this.bank = bank;
 		this.accountNumber = accountNumber;
-		Account acc = bank.getAccount(accountNumber);
-		if (acc.validatePin(attemptedPin) == false) {
+		if (bank.authenticateUser(accountNumber, attemptedPin) == false) {
 			throw new Exception("Pin invalid");
 		} 
 	}
 
 	public double getBalance() {
 		// complete the function
-				Account acc = bank.getAccount(this.accountNumber);
-        return acc.getBalance();
+        return this.bank.getBalance(this.accountNumber);
 	}
 
 	public void credit(double amount) {
 		// complete the function
-		Account acc = bank.getAccount(this.accountNumber);
-		acc.creditAccount(amount);
+		this.bank.credit(this.accountNumber, amount);
 	}
 
 	public boolean debit(double amount) {
 		// complete the function
-				Account acc = bank.getAccount(this.accountNumber);
-				boolean is_debited = acc.debitAccount(amount);
+				boolean is_debited = this.bank.debit(this.accountNumber, amount);
         return is_debited;
 	}
 }
