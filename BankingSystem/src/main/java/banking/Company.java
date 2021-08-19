@@ -2,7 +2,7 @@ package banking;
 
 public class Company  extends AccountHolder{
 	private String companyName;
-	private String taxId;
+	private int taxId;
 
 	public Company(String companyName, int taxId) {
 		// complete the function
