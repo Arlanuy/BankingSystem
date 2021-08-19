@@ -27,7 +27,7 @@ public class Bank implements BankInterface {
 		// complete the function
 				Random rd = new Random();
 				Long accountNumber = rd.nextLong();
-				this.accounts.put(new CommercialAccount(company, accountNumber, pin, startingDeposit));
+				this.accounts.put(accountNumber, new CommercialAccount(company, accountNumber, pin, startingDeposit));
         return accountNumber;
 	}
 
