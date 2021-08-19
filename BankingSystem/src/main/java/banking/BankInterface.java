@@ -14,7 +14,7 @@ public interface BankInterface {
 	 * @return The account number for the newly created account.
 	 */
 	public Long openCommercialAccount(Company company, int pin, double startingDeposit);
-
+	
 	/**
 	 * Creates a new account and adds it to {@link Bank#accounts}.
 	 *
